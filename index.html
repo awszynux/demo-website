@@ -1,0 +1,22 @@
+<html>
+<script>
+
+function myFunction() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("my-demo").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "https://to26rv3ri6.execute-api.ap-south-1.amazonaws.com/default/mylamda", true);
+    xhttp.send();
+
+}
+
+</script>
+<body><div align="center"><br><br><br><br>
+<h1> <span id="my-demo">ZYNUX!</span></h1>
+<button onclick="myFunction()">Click me</button><br>
+<img src="https://zynux-clt.s3.ap-south-1.amazonaws.com/logo.png"></div>
+</body>
+</html>
